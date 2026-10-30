@@ -1,0 +1,25 @@
+{
+  // Biblioteca: la lógica de src/nomenclador/ (sin Vue) compilada a JavaScript con sus tipos, para
+  // usarla desde otras aplicaciones. npm run build:lib → dist-lib/
+  "include": ["src/nomenclador/**/*.ts"],
+  "exclude": ["src/nomenclador/**/*.test.ts", "src/nomenclador/georefFalso.ts"],
+  "compilerOptions": {
+    "outDir": "dist-lib",
+    "rootDir": "src/nomenclador",
+    "declaration": true,
+    "sourceMap": true,
+    "target": "ES2022",
+    "lib": ["ES2023", "DOM"],
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
+    // Los imports llevan .ts (para correr en Node sin compilar): al compilar pasan a .js
+    "allowImportingTsExtensions": true,
+    "rewriteRelativeImportExtensions": true,
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUncheckedIndexedAccess": true,
+    "exactOptionalPropertyTypes": true,
+    "skipLibCheck": true,
+    "types": []
+  }
+}
